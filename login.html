@@ -1,0 +1,181 @@
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TeacherApp</title>
+
+    <!-- Page Description, Author and Keywords -->
+    <meta name="description" content="Class Teacher App">
+    <meta name="author" content="Helder Timba">
+	<meta name="keywords" content="Escola, School" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://localhost:8081/suc/images/favicons/dc/favicon.png">
+	
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/core.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/minified/bg.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	<!-- /theme JS files -->
+
+
+
+        <!-- START NOTIFICATION -->
+        <script>
+
+            jQuery(function () {
+
+		// Defaults override - hide "close all" button
+         $.jGrowl.defaults.closer = false;
+
+                var erro = 'Teste de notificação do sistema';
+				var bg = '';
+				var hd = "Notificação do Sistema";
+				var cl = "#66BB6A";
+				var tp = "success";
+
+                if (bg !== '')
+                {
+					/*$.jGrowl(erro, {
+					            position: 'center',
+								header: hd,
+								theme: bg
+							});*/
+
+							if(bg === 'bg-error')
+							{
+							   cl  = "#EF5350";
+							   tp = "error";
+							}
+
+							if(bg === 'bg-warning')
+							{
+							   cl  = "#FF7043";
+							   tp = "warning";
+							}
+
+
+							  swal({
+								title: hd,
+								text: erro,
+								confirmButtonColor: cl,
+								type: tp,
+								timer: 5000
+							});
+                }
+
+
+            });
+        </script>
+        <!-- END NOTIFICATION -->
+
+</head>
+
+<body oncontextmenu="return false">
+
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="navbar-header">
+                <h5 class="text-semibold class text-uppercase" style="margin-left: 2em;"> TeacherApp </h5>
+
+			<ul class="nav navbar-nav pull-right visible-xs-block">
+				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page container -->
+	<div class="page-container login-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+
+
+
+				<!-- Simple login form -->
+				<form action="logar.php" method="post">
+					<div class="panel panel-body login-form">
+						<div class="text-center">
+
+
+							<h5 class="mt-3 content-group" style=" margin-top: 20px; "><small class="display-block">TeacherApp</small></h5>
+						</div>
+
+						<div class="form-group has-feedback has-feedback-left">
+							<input type="text" class="form-control" placeholder="Username" name="user"><!--disabled -->
+							<div class="form-control-feedback">
+								<i class="icon-user text-muted"></i>
+							</div>
+
+
+						</div>
+
+						<div class="form-group has-feedback has-feedback-left">
+							<input type="password" class="form-control" placeholder="Password" name="pass">
+							<div class="form-control-feedback">
+								<i class="icon-lock2 text-muted"></i>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn  btn-block">Login <i class="icon-circle-right2 position-right"></i></button>
+						</div>
+
+
+						<div class="text-center">
+							
+						</div>
+					</div>
+				</form>
+				<!-- /simple login form btn-primary-->
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+				<!-- Footer <a href="#" class="text-green-700"> </a>-->
+            <div class="footer text-bold text-white">
+
+                &copy; 2019 <a href="#" class="text-success-300">TeacherApp</a>
+				
+            </div>
+            <!-- /footer -->
+
+	</div>
+	<!-- /page container -->
+
+</body>
+
+
+</html>
